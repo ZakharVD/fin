@@ -64,7 +64,7 @@ function MobileSidebar({ isOpen }: { isOpen: boolean }) {
 
   return (
     <div
-      className={`absolute flex sm:hidden h-[95vh] w-screen bg-background transition-all duration-200 ease-linear top-16 z-30 ${
+      className={`absolute flex sm:hidden min-h-screen w-screen bg-background transition-all duration-200 ease-linear top-16 z-20 ${
         isOpen ? "left-0 opacity-100" : "left-[-100vw] opacity-0"
       }`}
     >

@@ -122,7 +122,7 @@ export default function UserSettingsPage() {
     <div className="flex flex-col sm:flex-row">
       <Sidebar />
       <MobileNavbar />
-      <section className="bg-white h-screen w-full pt-5 pl-8">
+      <section className="bg-white h-screen w-full pt-5 px-4 sm:px-8">
         <p className="font-medium text-2xl mb-3">Settings</p>
         <div className="h-auto">
           <SettingHeading text="My Profile" />

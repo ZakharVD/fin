@@ -69,7 +69,7 @@ export default function LoginPage() {
       <Navbar />
       <div className="mt-16 flex justify-center items-center">
         <form
-          className="h-[380px] w-[90%] max-w-[450px] mx-auto bg-white rounded-lg py-4 px-7 border-[1px] shadow-xl"
+          className="h-[400px] sm:h-[380px] w-[90%] max-w-[450px] mx-auto bg-white rounded-lg py-4 px-7 border-[1px] shadow-xl"
           onSubmit={onFormSubmit}
         >
           <p className="text-center text-2xl font-semibold m-3">
