@@ -71,7 +71,6 @@ export default function UserSettingsPage() {
       if (res.ok) {
         const data = await res.json()
         dispatch(setCurrentUser(data))
-        activateAlert(alertMessages.profileUpdated, alertOptions.green)
       } else {
         throw Error
       }
@@ -93,6 +92,7 @@ export default function UserSettingsPage() {
         activateAlert(alertMessages.error, alertOptions.red)
       }
     }
+    activateAlert(alertMessages.profileUpdated, alertOptions.green)
   }
 
   function onEditEmailHandler() {
