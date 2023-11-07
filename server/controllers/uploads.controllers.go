@@ -20,15 +20,7 @@ import (
 func UploadFile(w http.ResponseWriter, r *http.Request) {
 	// upload a user profile picture
 
-	err := godotenv.Load()
-	if err != nil {
-		log.Println("Failed to load env.")
-		return
-	}
-	os.Getenv("AWS_BUCKET_NAME")
-	os.Getenv("AWS_REGION")
-	os.Getenv("AWS_ACCESS_KEY")
-	os.Getenv("AWS_SECRET_ACCESS_KEY")
+	godotenv.Load()
 
 	userID := r.Context().Value("userID").(string)
 
@@ -98,14 +90,7 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 func DeleteFile(w http.ResponseWriter, r *http.Request) {
 	// delete user profile picture
 
-	if err := godotenv.Load(); err != nil {
-		log.Println("Failed to load env.")
-		return
-	}
-	os.Getenv("AWS_BUCKET_NAME")
-	os.Getenv("AWS_REGION")
-	os.Getenv("AWS_ACCESS_KEY")
-	os.Getenv("AWS_SECRET_ACCESS_KEY")
+	godotenv.Load()
 
 	userID := r.Context().Value("userID").(string)
 
