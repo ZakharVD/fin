@@ -18,7 +18,7 @@ export default function MobileNavbar() {
     setIsSidebarOpen((prev) => !prev)
   }
   return (
-    <div className="flex sm:hidden flex-row w-[90%] mx-auto py-4">
+    <div className="flex sm:hidden flex-row w-[90%] mx-auto py-4 bg-background">
       <div className="w-full flex flex-row justify-between items-center">
         <img src={menu} alt="" className="w-5 h-5 cursor-pointer" onClick={onToggle} />
         <p className="font-logo font-semibold text-3xl">Finlio<span className="text-[#ff6884]">.</span></p>
