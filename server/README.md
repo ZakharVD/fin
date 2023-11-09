@@ -13,8 +13,9 @@ Here is what this application is built with:
 
 **Note:** The routes starting with "/dashboard" require the following header:
 
-````json
+```json
 "Authorization": "Bearer token"
+```
 
 ### User
 POST "/register" - creates a new user.
@@ -27,6 +28,7 @@ POST "/register" - creates a new user.
     "email": "myEmail",
     "password": "myPassword"
 }
+```
 - Expected response:
 ```json
 {
@@ -36,7 +38,7 @@ POST "/register" - creates a new user.
     "email": "test@gmail.com",
     "hasProfileImage": false
 }
-
+```
 POST “/login” - check the user credential and logs in user.
 - Expected payload:
 ```json
@@ -44,6 +46,7 @@ POST “/login” - check the user credential and logs in user.
 	"email": "myEmail",
 	"password": "myPassword"
 }
+```
 - Expected response:
 ```json
 {
@@ -53,4 +56,4 @@ POST “/login” - check the user credential and logs in user.
     "email": "test@gmail.com",
 		"hasProfileImage": false
 }
-````
+```
