@@ -1,56 +1,56 @@
-## Api Docs
+# Documentation
 
-### Endpoints:
+Welcome to Finlio!
 
-- POST "/register"
-Payload:
+Here is what this application is built with:
+
+- Golang (REST API with Gorilla Mux and GORM)
+- PostgreSQL (v15)
+- JWT (authentication)
+- AWS (S3 image storage)
+
+## The endpoints used:
+
+**Note:** The routes starting with "/dashboard" require the following header:
+
+````json
+"Authorization": "Bearer token"
+
+### User
+POST "/register" - creates a new user.
+
+- Expected payload:
+```json
 {
-    "firstName": "first_name",
-    "lastName": "last_name",
-    "email":"email@gmail.com",
-    "password":"password"
+    "firstName": "myFirstName",
+    "lastName": "myLastName",
+    "email": "myEmail",
+    "password": "myPassword"
+}
+- Expected response:
+```json
+{
+    "id": "6c8ae294-c3ba-41e4-9583-44e77b8ad470",
+    "firstName": "FirstName",
+    "lastName": "LastName",
+    "email": "test@gmail.com",
+    "hasProfileImage": false
 }
 
-- POST "/login"
-Payload:
+POST “/login” - check the user credential and logs in user.
+- Expected payload:
+```json
 {
-    "email":"email@gmail.com",
-    "password":"password"
+	"email": "myEmail",
+	"password": "myPassword"
 }
-
-## ! Routes below are prefixed with "/dashboard"
-
-- GET "/collections" - returns all collection avaibale to the user
-Headers: "Authorization": "Bearer" + token
-
-- POST "/collections" - adds new collection
-Headers: "Authorization": "Bearer" + token
-Payload: 
+- Expected response:
+```json
 {
-    "collectionName": "name_of_collection"
-} 
-
-- GET "/collections/{collectionId}" - return data about collection for given id
-Headers: "Authorization": "Bearer" + token
-
-- GET "/expenses/{collectionId}" - returns all expenses for given collection
-Headers: "Authorization": "Bearer" + token
-
-- POST "/expenses/{collectionId}" - adds new expense for the given collection
-Headers: "Authorization": "Bearer" + token
-Payload:
-{
-    "amount": "amount",
-    "description": "description to expense,
-    "label": "label",
-    "day": "day"
+    "id": "6c8ae294-c3ba-41e4-9583-44e77b8ad470",
+    "firstName": "FirstName",
+    "lastName": "LastName",
+    "email": "test@gmail.com",
+		"hasProfileImage": false
 }
-
-- GET "/expenses/{expenseId}" - return expense based on its id
-Headers: "Authorization": "Bearer" + token
-
-- POST "/income/{collectionId}" - add a new income to the respective collection
-Headers: "Authorization": "Bearer" + token
-
-- GET "/income/{collectionId}" - returns all income for collection
-Headers: "Authorization": "Bearer" + token
+````
