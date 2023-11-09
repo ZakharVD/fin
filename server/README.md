@@ -18,7 +18,7 @@ Here is what this application is built with:
 ```
 
 ### User
-POST "/register" - creates a new user.
+POST `/register` - creates a new user.
 
 - Expected payload:
 ```json
