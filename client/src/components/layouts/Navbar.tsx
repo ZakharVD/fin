@@ -45,7 +45,7 @@ export default function Navbar() {
           </button>
         </div>
         ) : (
-          <button className="py-3 px-5 border-2 border-transparent bg-black text-white rounded-3xl hover:opacity-80" onClick={onContinueHandler}>Continue to dashboard</button>
+          <button className="py-3 px-5 border-2 border-transparent bg-black text-white rounded-md hover:opacity-80" onClick={onContinueHandler}>Continue to dashboard</button>
         )}
       </nav>
     </>
