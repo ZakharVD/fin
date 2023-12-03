@@ -9,11 +9,10 @@ export default function LandingPage() {
     <>
       <main className="gradientBg">
         <Navbar />
-        <section className="min-h-[90vh] flex flex-col justify-center items-center mb-5">
+        <section className="min-h-fit phone:min-h-[90vh] flex flex-col justify-start phone:justify-center items-center mt-10 phone:mt-0 mb-5">
           <div className="flex flex-col justify-center text-center mt-3 max-w-[95%]">
-            <h1 className="text-3xl sm:text-4xl mb-5">
-              <span className="text-4xl sm:text-5xl font-semibold">Finlio</span>{" "}
-              - your financial buddy.
+            <h1 className="text-3xl sm:text-5xl mb-5">
+              Your new financial buddy.
             </h1>
             <h3 className="font-light mb-5 text-lg text-zinc-600">
               Gain a clear view of your spending habits and watch your savings
