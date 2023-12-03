@@ -9,7 +9,7 @@ export default function LandingPage() {
     <>
       <main className="gradientBg">
         <Navbar />
-        <section className="min-h-[90vh] flex flex-col justify-center items-center mb-8">
+        <section className="min-h-[90vh] flex flex-col justify-center items-center mb-5">
           <div className="flex flex-col justify-center text-center mt-3 max-w-[95%]">
             <h1 className="text-3xl sm:text-4xl mb-5">
               <span className="text-4xl sm:text-5xl font-semibold">Finlio</span>{" "}
@@ -49,7 +49,7 @@ export default function LandingPage() {
                 access to various tools and analytics - all build to to give you
                 confidence in your financial decisions.{" "}
               </p>
-              <div className="w-[100%] mx-auto phone:mx-0 phone:max-w-[200px]">
+              <div className="w-[100%] mx-auto phone:mx-0 phone:max-w-[200px] mb-5">
                 <GetStartedBtn />
               </div>
             </div>
