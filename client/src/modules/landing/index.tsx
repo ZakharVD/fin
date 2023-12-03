@@ -9,7 +9,7 @@ export default function LandingPage() {
     <>
       <main className="gradientBg">
         <Navbar />
-        <section className="min-h-[90vh] flex flex-col justify-center items-center">
+        <section className="min-h-[90vh] flex flex-col justify-center items-center mb-8">
           <div className="flex flex-col justify-center text-center mt-3 max-w-[95%]">
             <h1 className="text-3xl sm:text-4xl mb-5">
               <span className="text-4xl sm:text-5xl font-semibold">Finlio</span>{" "}
@@ -24,14 +24,14 @@ export default function LandingPage() {
               <GetStartedBtn />
             </div>
           </div>
-          <div className="w-[95%] xl:w-[70%] h-auto my-10">
+          <div className="w-[95%] xl:w-[70%] h-auto mt-10">
             <img src={dashboardImage} alt="" className="rounded-lg shadow-md"/>
           </div>
-          <div className="flex phone:hidden w-[95%]">
+          <div className="flex phone:hidden w-[95%] mt-10">
             <GetStartedBtn/>
           </div>
         </section>
-        <section className="h-screen bg-white flex justify-center items-center">
+        <section className="min-h-screen bg-white flex justify-center items-center">
           <div className="w-[90%] max-w-[1300px] mx-auto flex flex-col lg:flex-row">
             <div className="lg:w-1/2 flex justify-center items-center bg-white mb-5 lg:mb-0">
             <img
